@@ -34,11 +34,13 @@ module.exports = (sequelize, Sequelize) => {
                 model: 'types',
                 key: 'id'
             }
-        }
-        
-      
-      
-    });
+        } 
+    },
+    {
+      timestamps:false,
+      underscored:true
+    }
+    );
   
     return Question;
   };

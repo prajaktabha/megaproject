@@ -12,6 +12,7 @@ import { McqbtComponent } from './components/mcqbt/mcqbt.component';
 import { McqdesComponent } from './components/mcqdes/mcqdes.component';
 import { GkComponent } from './components/gk/gk.component';
 import { LtComponent } from './components/lt/lt.component';
+import { QuestionsComponent } from './components/questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { LtComponent } from './components/lt/lt.component';
  
     GkComponent,
  
-    LtComponent
+    LtComponent,
+    QuestionsComponent
+ 
+    
   ],
   imports: [
     BrowserModule,

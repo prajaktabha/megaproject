@@ -16,7 +16,9 @@ export class AddTutorialComponent implements OnInit {
     categoryid:''
   };
 
+  
   submitted = false;
+
 
   constructor(private tutorialService: TutorialService) { }
 
@@ -52,5 +54,6 @@ export class AddTutorialComponent implements OnInit {
 
     };
   }
+
 
 }

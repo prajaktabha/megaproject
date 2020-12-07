@@ -3,7 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
 
+
 const baseUrl = 'http://localhost:8080/api/quizes';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +26,8 @@ export class TutorialService {
   create(data: any): Observable<any> {
     return this.http.post(baseUrl, data);
   }
+
+
 
   
 }

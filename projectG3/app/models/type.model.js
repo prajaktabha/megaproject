@@ -4,6 +4,10 @@ module.exports = (sequelize, Sequelize) => {
         type: Sequelize.STRING
       }
       
+    },
+    {
+      timestamps:false,
+      underscored:true
     });
   
     return Type;

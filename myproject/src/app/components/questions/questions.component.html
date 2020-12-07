@@ -1,0 +1,101 @@
+
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="questions">Question</label>
+          <input
+            type="text"
+            class="form-control"
+            id="questions"
+            required
+            [(ngModel)]="question.questions"
+            name="questions"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="option1">option1</label>
+          <input
+            class="form-control"
+            id="option1"
+            required
+            [(ngModel)]="question.option1"
+            name="option1"
+          />
+        </div>
+
+
+        <div class="form-group">
+          <label for="option2">option2</label>
+          <input
+            class="form-control"
+            id="option2"
+            required
+            [(ngModel)]="question.option2"
+            name="option2"
+          />
+        </div>
+
+
+        <div class="form-group">
+          <label for="option3">option3</label>
+          <input
+            class="form-control"
+            id="option3"
+            required
+            [(ngModel)]="question.option3"
+            name="option3"
+          />
+        </div>
+
+        
+        <div class="form-group">
+            <label for="option4">option4</label>
+            <input
+              class="form-control"
+              id="option4"
+              required
+              [(ngModel)]="question.option4"
+              name="option4"
+            />
+          </div>
+        
+          <div class="form-group">
+            <label for="option1">answer</label>
+            <input
+              class="form-control"
+              id="option1"
+              required
+              [(ngModel)]="question.answer"
+              name="option1"
+            />
+          </div>
+          <div class="form-group">
+            <label for="option1">quizid</label>
+            <input
+              class="form-control"
+              id="option1"
+              required
+              [(ngModel)]="question.quizid"
+              name="option1"
+            />
+          </div>
+          <div class="form-group">
+            <label for="option1">typeid</label>
+            <input
+              class="form-control"
+              id="option1"
+              required
+              [(ngModel)]="question.typeid"
+              name="option1"
+            />
+          </div>
+  
+        <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+       
+     <app-questions></app-questions>
+  </div>

@@ -26,7 +26,11 @@ module.exports = (sequelize, Sequelize) => {
     }
       
       
-    });
+    },
+    {
+        timestamps:false,
+        underscored:true
+      });
   
     return Status;
   };

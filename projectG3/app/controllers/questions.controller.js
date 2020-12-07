@@ -39,9 +39,14 @@ const Op = db.Sequelize.Op;
 // };
 
 
+
+
+
+
+
 //insert
 exports.insert=(req,res)=>{
-  db.sequelize.query("insert into questions values (default,?,?,?,?,?,(select id from quizes where quizname=?),(select id from types where type=?))",
+  db.sequelize.query("insert into questions values (default,?,?,?,?,?,?,(select id from quizes where quizname=?),(select id from types where type=?))",
   {replacements: [req.body.id,req.body.questions,req.body.option1,req.body.option2,req.body.option3,req.body.option4,req.body.answer,req.body.quizname,req.body.type],type: db.sequelize.QueryTypes.INSERT}).then(data=>{
     res.send(data);
   });

@@ -1,19 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Tutorial } from '../models/tutorial.model';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { Tutorial } from "../models/tutorial.model";
 
-
-const baseUrl = 'http://localhost:8080/api/quizes';
-
-
+const baseUrl = "http://localhost:8080/api/quizes";
 
 @Injectable({
-  providedIn: 'root'
-})  
+  providedIn: "root",
+})
 export class TutorialService {
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAll(): Observable<Tutorial[]> {
     return this.http.get<Tutorial[]>(baseUrl);
@@ -27,7 +23,8 @@ export class TutorialService {
     return this.http.post(baseUrl, data);
   }
 
-
-
-  
+  // getcatid(catg: any) {
+  //   console.log(catg);
+  //   return this.http.get(`${baseUrl}/${catg}`);
+  // }
 }

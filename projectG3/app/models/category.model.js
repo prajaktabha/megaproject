@@ -3,6 +3,10 @@ module.exports = (sequelize, Sequelize) => {
       category: {
         type: Sequelize.STRING
       },
+    },
+    {
+      timestamps:false,
+      underscored:true
     }
     );
   

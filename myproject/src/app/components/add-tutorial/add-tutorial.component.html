@@ -1,0 +1,64 @@
+
+
+
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="quizname">quizname</label>
+          <input
+            type="text"
+            class="form-control"
+            id="quizname"
+            required
+            [(ngModel)]="tutorial.quizname"
+            name="quizname"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="time">time</label>
+          <input
+            class="form-control"
+            id="time"
+            required
+            [(ngModel)]="tutorial.time"
+            name="time"
+          />
+        </div>
+
+
+        <div class="form-group">
+          <label for="count">count</label>
+          <input
+            class="form-control"
+            id="count"
+            required
+            [(ngModel)]="tutorial.count"
+            name="count"
+          />
+        </div>
+
+
+        <div class="form-group">
+          <label for="categoryid">categoryid</label>
+          <input
+            class="form-control"
+            id="categoryid"
+            required
+            [(ngModel)]="tutorial.categoryid"
+            name="categoryid"
+          />
+        </div>
+  
+        <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+       
+      <div>
+        question paper
+      </div>
+      </div>
+    </div>
+  </div>
